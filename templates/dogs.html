@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %} {% for group in group %}
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">{{group.group}}</span>
+            
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endfor %} {% endblock %}

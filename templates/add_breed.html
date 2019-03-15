@@ -1,0 +1,80 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Add Dog Breed</h3>
+<div class="row">
+    <form action="{{ url_for('insert_dog') }}" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">pets</i>
+                <textarea name="breed" id="breed" class="materialize-textarea"></textarea>
+                <label>Dog Breed</label>
+            </div>
+        </div>
+        <div class='row'>
+            <label>Pedigree Group</label>
+            <select class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+                  {% for group in group %}
+                      <option value="{{group.group}}">{{group.group}}</option>
+                  {% endfor %}
+  </select>
+        </div>
+
+        <div class='row'>
+            <label>Size</label>
+            <select class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="1">Tiny</option>
+    <option value="2">Small</option>
+    <option value="3">Medium</option>
+    <option value="3">Large</option>
+    <option value="3">Giant</option>
+  </select>
+        </div>
+         <div class='row'>
+            <label>Exercise Needs</label>
+            <select class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="1">Low</option>
+    <option value="2">Moderate</option>
+    <option value="3">High</option>
+
+  </select>
+        </div>
+         <div class='row'>
+            <label>Grooming Needs</label>
+            <select class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+     <option value="1">Low</option>
+    <option value="2">Moderate</option>
+    <option value="3">High</option>
+  </select>
+        </div>
+         <div class='row'>
+            <label>Intelligence</label>
+            <select class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+     <option value="1">Low</option>
+    <option value="2">Moderate</option>
+    <option value="3">High</option>
+  </select>
+        </div>
+        
+    <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">today</i>
+                <textarea name="breed" id="breed" class="materialize-textarea"></textarea>
+                <label>Average Lifespan (Years)</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Add Dog
+    <i class="material-icons right">add</i>
+  </button>
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock %}

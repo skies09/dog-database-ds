@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dog Database</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+</head>
+
+<body>
+   <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="{{url_for('get_dogs')}}" class="brand-logo">Doggy Database</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{url_for('add_breed')}}"><i class="material-icons right">add</i>Add Breed</a></li>
+                    <li><a href="#" class="waves-effect waves-light btn">Login <i class="material-icons right">account_circle</i></a></li>
+                    <li><a href="#" class="waves-effect waves-light btn">Register <i class="material-icons right">how_to_reg</i></a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#">All Breeds</a></li>
+                    <li><a href="#">Add Breeds</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!--intoduction-->
+    <article class='container introduction-container'>
+        <div class='row'>
+            <div class='col-xs-12'>
+                <h1><strong>Dog Database</strong></h1>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+    <div class='container'>
+        {% block content %} {% endblock %}
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-9">
+                    <h4>&copy;2019 Donna Smith</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/javascript.js') }}"></script>
+</body>
+
+</html>
