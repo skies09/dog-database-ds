@@ -19,7 +19,6 @@ h1{
 /*containers*/
 
 .introduction-container {
-
     min-height: 300px;
     min-width: 100%;
     background-image: url(/static/img/dog-banner.jpg);
@@ -32,6 +31,14 @@ h1{
     background-size: cover;
 }
 
+/*carousel*/
+/*fix this*/
+
+.carousel {
+    height: 200;
+    margin:25px;
+
+}
 
 /*footer*/
 footer{

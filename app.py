@@ -9,7 +9,7 @@ app.config["MONGO_URI"] = 'mongodb+srv://admin:admin1@myfirstcluster-oj81k.mongo
 
 mongo = PyMongo(app)
 
-
+#home page
 @app.route('/')
 @app.route('/get_dogs')
 def get_dogs():
@@ -64,7 +64,12 @@ def working_group():
 def add_breed():
     return render_template('add_breed.html',
     group=mongo.db.group.find(),
-                           breed=mongo.db.breed.find())
+                           breed=mongo.db.breed.find(),
+                           size=mongo.db.breed.find(),
+                           lifespan=mongo.db.breed.find(),
+                           exercising_needs=mongo.db.breed.find(),
+                           grooming_needs=mongo.db.breed.find(),
+                           intelligence=mongo.db.breed.find())
                           
 
 #this inserts the added dog into the database
@@ -73,7 +78,35 @@ def insert_dog():
     breed = mongo.db.breed
     breed.insert_one(request.form.to_dict())
     return redirect(url_for('get_dogs'))    
+    
+    
+#Edit dog section
+@app.route('/edit_breed/<breed_id>')
+def edit_breed(breed_id):
+    breed =  mongo.db.breed.find_one({"_id": ObjectId(breed_id)})
+    group =  mongo.db.group.find()
+    return render_template('edit_breed.html', breed=breed, group=group)
 
+@app.route('/update_breed/<breed_id>', methods=["POST"])
+def update_breed(breed_id):
+    breed = mongo.db.breed
+    breed.update( {'_id': ObjectId(breed_id)},
+    {
+        'breed':request.form.get('breed'),
+        'group':request.form.get('group'),
+        'size':request.form.get('size'),
+        'lifespan': request.form.get('lifespan'),
+        'exercising_needs': request.form.get('exercising_needs'),
+        'grooming_needs':request.form.get('grooming_needs'),
+        'intelligence':request.form.get('intelligence')
+    })
+    return redirect(url_for('get_dogs'))
+    
+#This deletes the dog
+@app.route('/delete_breed/<breed_id>', methods=["GET","POST"])
+def delete_breed(breed_id):
+    mongo.db.breed.remove({'_id': ObjectId(breed_id)})
+    return redirect(url_for('get_dogs'))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

@@ -13,6 +13,12 @@
                    Grooming Needs - {{breed.grooming_needs}}</br>
                    Intelligence - {{breed.intelligence}}</br>
                 </span>
+
+     <form method="POST">
+          <a href="{{url_for('edit_breed', breed_id=breed._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+          <a href="{{url_for('delete_breed', breed_id=breed._id)}}" class="waves-effect waves-light btn btn_small red">Delete</a>
+        </form>
+        
       </div>
     </div>
   </div>
