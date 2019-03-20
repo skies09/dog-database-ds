@@ -58,6 +58,11 @@ def working_group():
     return render_template('working_group.html',
     breed=mongo.db.breed.find({"group": "Working"}))
 
+#all dogs
+@app.route('/all_group')
+def all_group():
+    return render_template('all_group.html',
+        breed=mongo.db.breed.find())
     
 # add dog page
 @app.route('/add_breed')
@@ -107,6 +112,13 @@ def update_breed(breed_id):
 def delete_breed(breed_id):
     mongo.db.breed.remove({'_id': ObjectId(breed_id)})
     return redirect(url_for('get_dogs'))
+
+#search for specific dog, this part is not working!
+@app.route('/search_breed')
+def search_breed():
+    mongo.db.breed.find({"size": "Medium"})
+    return render_template('all_group.html')
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

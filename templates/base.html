@@ -14,20 +14,22 @@
 </head>
 
 <body>
-   <header>
+    <header>
         <nav>
             <div class="nav-wrapper">
                 <a href="{{url_for('get_dogs')}}" class="brand-logo">Dog Database</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('add_breed')}}"><i class="material-icons right">add</i>Add Breed</a></li>
-                    <li><a href="#" class="waves-effect waves-light btn">Login <i class="material-icons right">account_circle</i></a></li>
+                    <li><a href="{{url_for('all_group')}}"><i class="material-icons right">toc</i>All Breeds</a></li>
+                    <!-- <li><a href="#" class="waves-effect waves-light btn">Login <i class="material-icons right">account_circle</i></a></li>
                     <li><a href="#" class="waves-effect waves-light btn">Register <i class="material-icons right">how_to_reg</i></a></li>
+                    -->
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="#">Add Breeds</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
+                    <!--   <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li> -->
                 </ul>
             </div>
         </nav>
@@ -43,7 +45,7 @@
         </div>
     </article>
 
-    
+
 
 
     <div class='container'>
