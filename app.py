@@ -113,11 +113,31 @@ def delete_breed(breed_id):
     mongo.db.breed.remove({'_id': ObjectId(breed_id)})
     return redirect(url_for('get_dogs'))
 
-#search for specific dog, this part is not working!
-@app.route('/search_breed')
-def search_breed():
-    mongo.db.breed.find({"size": "Medium"})
-    return render_template('all_group.html')
+#sort dogs by size
+@app.route('/sort_by_size', methods=["GET","POST"])
+def sort_by_size():
+    breed=mongo.db.breed.find().sort("size", -1)
+    return render_template('all_group.html', breed=breed)
+    
+#sort dogs by exercise_needs
+@app.route('/sort_by_exercise_needs', methods=["GET","POST"])
+def sort_by_exercise_needs():
+    breed=mongo.db.breed.find().sort("exercise_needs", -1)
+    return render_template('all_group.html', breed=breed)
+
+#sort dogs by grooming_needs
+@app.route('/sort_by_grooming_needs', methods=["GET","POST"])
+def sort_by_grooming_needs():
+    breed=mongo.db.breed.find().sort("grooming_needs", 1)
+    return render_template('all_group.html', breed=breed)
+
+#sort dogs by intelligence
+@app.route('/sort_by_intelligence', methods=["GET","POST"])
+def sort_by_intelligence():
+    breed=mongo.db.breed.find().sort("intelligence", -1)
+    return render_template('all_group.html', breed=breed)
+
+
 
 
 if __name__ == '__main__':

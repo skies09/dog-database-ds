@@ -5,7 +5,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">pets</i>
-                <textarea name="breed" id="breed" class="materialize-textarea"></textarea>
+                <textarea name="breed" id="breed" class="materialize-textarea">{{breed.breed}}</textarea>
                 <label>Dog Breed</label>
             </div>
         </div>
@@ -15,7 +15,7 @@
             <select id="group" name="group" class="browser-default">
     <option value="" disabled selected>Choose your option</option>
                   {% for breed in group %}
-                      <option value="{{breed.group}}">{{breed.group}}</option>
+                      <option value="{{breed.group}}"selected >{{breed.group}}</option>
                   {% endfor %}
   </select>
         </div>
@@ -23,7 +23,7 @@
         <div class='row'>
             <label>Size</label>
             <select id="size" name="size" class="browser-default">
-    <option value="" disabled selected>Choose your option</option>
+    <option value="{{breed.size}}"selected >{{breed.size}}</option>
     <option value="Tiny">Tiny</option>
     <option value="Small">Small</option>
     <option value="Medium">Medium</option>
@@ -35,37 +35,43 @@
         <div class='row'>
             <label>Exercise Needs</label>
             <select id="exercising_needs" name="exercising_needs" class="browser-default">
-    <option value="" disabled selected>Choose your option</option>
-    <option value="Low">Low</option>
-    <option value="Moderate">Moderate</option>
-    <option value="High">High</option>
+    <option value="{{breed.exercise_needs}}"selected >{{breed.exercise_needs}}</option>
+     <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
   </select>
         </div>
 
         <div class='row'>
             <label>Grooming Needs</label>
             <select id="grooming_needs" name="grooming_needs" class="browser-default">
-    <option value="" disabled selected>Choose your option</option>
-     <option value="Low">Low</option>
-    <option value="Moderate">Moderate</option>
-    <option value="High">High</option>
+    <option value="{{breed.grooming_needs}}"selected >{{breed.grooming_needs}}</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
   </select>
         </div>
 
         <div class='row'>
             <label>Intelligence</label>
             <select id="intelligence" name="intelligence" class="browser-default">
-    <option value="" disabled selected>Choose your option</option>
-     <option value="Low">Low</option>
-    <option value="Moderate">Moderate</option>
-    <option value="High">High</option>
+    <option value="{{breed.intelligence}}"selected >{{breed.intelligence}}</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
   </select>
         </div>
 
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">today</i>
-                <textarea name="lifespan" id="lifespan" class="materialize-textarea"></textarea>
+                <textarea name="lifespan" id="lifespan" class="materialize-textarea">{{breed.lifespan}}</textarea>
                 <label>Average Lifespan (Years)</label>
             </div>
         </div>

@@ -6,4 +6,6 @@ $(".button-collapse").sideNav();
     fullWidth: true,
     indicators: true
   });
+  
+
 });

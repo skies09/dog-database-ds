@@ -1,28 +1,30 @@
-{% extends 'base.html' %} {% block content %} 
+{% extends 'base.html' %} {% block content %}
 
-  <a href="{{url_for('search_breed')}}" class="waves-effect waves-light btn btn_small blue">Search</a>
+<form method="GET","POST">
+  
+  <a href="{{url_for('sort_by_size', breed=breed)}}" class="waves-effect waves-light btn btn_small blue">Sort by Size</a>
+  <a href="{{url_for('sort_by_exercise_needs', breed=breed)}}" class="waves-effect waves-light btn btn_small blue">Sort by Exercise Needs</a>
+  <a href="{{url_for('sort_by_grooming_needs', breed=breed)}}" class="waves-effect waves-light btn btn_small blue">Sort by Grooming Needs</a>
+  <a href="{{url_for('sort_by_intelligence', breed=breed)}}" class="waves-effect waves-light btn btn_small blue">Sort by Intelligence</a>
+</form>
+
 
 {% for breed in breed %}
 
-<div class="row">
-  <div class="col s12 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">{{breed.breed}}</span>
-        <span>
+<ul class="collapsible popout">
+  <li>
+    <div class="collapsible-header"><i class="material-icons">pets</i>{{breed.breed}}</div>
+    <div class="collapsible-body"> <span>
                    Pedigree group - {{breed.group}}</br>
                    Size - {{breed.size}}</br>
                    Lifespan - {{breed.lifespan}}</br>
                    Exercise Needs - {{breed.exercise_needs}}</br>
                    Grooming Needs - {{breed.grooming_needs}}</br>
                    Intelligence - {{breed.intelligence}}</br>
-                </span>
+                </span></div>
+  </li>
 
-        
-      </div>
-    </div>
-  </div>
-</div>
+</ul>
 
 
 {% endfor %} {% endblock %}
