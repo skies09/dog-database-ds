@@ -1,22 +1,45 @@
+/*google fonts*/
+/*font-family: 'Cabin', sans-serif;
+font-family: 'Signika', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Cairo', sans-serif;*/
 
-h1{
+@import url('https://fonts.googleapis.com/css?family=Cabin|Cairo|Comfortaa|Signika');
+
+h1 {
+    font-family: 'Signika', sans-serif;
     text-align: center;
     font-size: larger;
-    color:#009933;
+    color: #009933;
     text-shadow: 2px 2px black;
-    padding-top:75px;
+    padding-top: 75px;
+}
+
+h2
+{
+    text-align: center;
+    text-decoration: underline;
+    color: #009933;
+    
 }
 
 .nav-wrapper {
     background-color: #009933;
     position: relative;
     min-height: 50px;
-    border: 1px solid transparent;
+    border: 1px solid black;
+}
+
+.nav-wrapper ul {
+    font-family: 'Comfortaa', cursive;
+    font-size: 28px;
 }
 
 
-
 /*containers*/
+.full-height{
+    min-height: calc(100vh - 454px);
+}
 
 .introduction-container {
     min-height: 300px;
@@ -32,16 +55,51 @@ h1{
 }
 
 /*carousel*/
-/*fix this*/
 
 .carousel {
-    height: 200;
-    margin:25px;
+    border: 3px solid black;
+    border-radius: 25px;
+    height: 100px;
+    margin: 25px;
+}
 
+/*group pages*/
+
+
+.card {
+    border: 3px solid black;
+}
+
+.card-title {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.card-content {
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+}
+
+span img{
+    width:200px;
+    height:150px
+}
+
+form{
+    padding:10px;
+}
+
+form a{
+    margin:10px;
 }
 
 /*footer*/
-footer{
+
+footer {
     background-color: #009933;
-    color:white;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    border: 1px solid black;
+    
 }

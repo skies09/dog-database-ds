@@ -1,12 +1,13 @@
 {% extends 'base.html' %} {% block content %}
 
-<form method="GET","POST">
-  
-  <a href="{{url_for('sort_by_size', breed=breed)}}" class="waves-effect waves-light btn btn_small blue">Sort by Size</a>
-  <a href="{{url_for('sort_by_exercise_needs', breed=breed)}}" class="waves-effect waves-light btn btn_small blue">Sort by Exercise Needs</a>
-  <a href="{{url_for('sort_by_grooming_needs', breed=breed)}}" class="waves-effect waves-light btn btn_small blue">Sort by Grooming Needs</a>
-  <a href="{{url_for('sort_by_intelligence', breed=breed)}}" class="waves-effect waves-light btn btn_small blue">Sort by Intelligence</a>
+<div class='row'>
+<form method="GET" , "POST">
+  <a href="{{url_for('sort_by_size', reverse=reverse)}}" class="waves-effect waves-light btn btn_small purple">Sort by Size<i class="material-icons">import_export</i></a>
+  <a href="{{url_for('sort_by_exercise_needs', reverse=reverse)}}" class="waves-effect waves-light btn btn_small green">Sort by Exercise Needs<i class="material-icons">import_export</i></a>
+  <a href="{{url_for('sort_by_grooming_needs', reverse=reverse)}}" class="waves-effect waves-light btn btn_small orange">Sort by Grooming Needs<i class="material-icons">import_export</i></a>
+  <a href="{{url_for('sort_by_intelligence', reverse=reverse)}}" class="waves-effect waves-light btn btn_small blue">Sort by Intelligence<i class="material-icons">import_export</i></a>
 </form>
+</div>
 
 
 {% for breed in breed %}

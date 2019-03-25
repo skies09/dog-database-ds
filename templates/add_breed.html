@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
-<h3>Add Dog Breed</h3>
+
+<h2>Add Dog Breed</h2>
 <div class="row">
     <form action="{{ url_for('insert_dog') }}" method="POST" class="col s12">
         <div class="row">
@@ -72,6 +73,13 @@
                 <i class="material-icons prefix">today</i>
                 <textarea name="lifespan" id="lifespan" class="materialize-textarea"></textarea>
                 <label>Average Lifespan (Years)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">add_a_photo</i>
+                <textarea name="picture" id="picture" class="materialize-textarea"></textarea>
+                <label>Picture URL</label>
             </div>
         </div>
 

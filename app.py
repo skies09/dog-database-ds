@@ -61,8 +61,8 @@ def working_group():
 #all dogs
 @app.route('/all_group')
 def all_group():
-    return render_template('all_group.html',
-        breed=mongo.db.breed.find())
+    return render_template('all_group.html', reverse="true",
+     breed=mongo.db.breed.find())
     
 # add dog page
 @app.route('/add_breed')
@@ -89,8 +89,7 @@ def insert_dog():
 @app.route('/edit_breed/<breed_id>')
 def edit_breed(breed_id):
     breed =  mongo.db.breed.find_one({"_id": ObjectId(breed_id)})
-    group =  mongo.db.group.find()
-    return render_template('edit_breed.html', breed=breed, group=group)
+    return render_template('edit_breed.html', breed=breed)
 
 @app.route('/update_breed/<breed_id>', methods=["POST"])
 def update_breed(breed_id):
@@ -114,30 +113,52 @@ def delete_breed(breed_id):
     return redirect(url_for('get_dogs'))
 
 #sort dogs by size
-@app.route('/sort_by_size', methods=["GET","POST"])
-def sort_by_size():
-    breed=mongo.db.breed.find().sort("size", -1)
-    return render_template('all_group.html', breed=breed)
+@app.route('/sort_by_size/<reverse>/', methods=["GET","POST"])
+def sort_by_size(reverse):
+    print(reverse, type(reverse))
+    if reverse.lower() == "true":
+        reverse = True
+        breed=mongo.db.breed.find().sort("size", 1)
+    else:
+        breed=mongo.db.breed.find().sort("size", -1)
+        reverse = False
+    return render_template('all_group.html', breed=breed, reverse = str(not reverse).lower())
     
 #sort dogs by exercise_needs
-@app.route('/sort_by_exercise_needs', methods=["GET","POST"])
-def sort_by_exercise_needs():
-    breed=mongo.db.breed.find().sort("exercise_needs", -1)
-    return render_template('all_group.html', breed=breed)
+@app.route('/sort_by_exercise_needs/<reverse>/', methods=["GET","POST"])
+def sort_by_exercise_needs(reverse): 
+    print(reverse, type(reverse))
+    if reverse.lower() == "true":
+        reverse = True
+        breed=mongo.db.breed.find().sort("exercise_needs", 1)
+    else:
+        breed=mongo.db.breed.find().sort("exercise_needs", -1)
+        reverse = False
+    return render_template('all_group.html', breed=breed, reverse = str(not reverse).lower())
 
 #sort dogs by grooming_needs
-@app.route('/sort_by_grooming_needs', methods=["GET","POST"])
-def sort_by_grooming_needs():
-    breed=mongo.db.breed.find().sort("grooming_needs", 1)
-    return render_template('all_group.html', breed=breed)
+@app.route('/sort_by_grooming_needs/<reverse>/', methods=["GET","POST"])
+def sort_by_grooming_needs(reverse): 
+    print(reverse, type(reverse))
+    if reverse.lower() == "true":
+        reverse = True
+        breed=mongo.db.breed.find().sort("grooming_needs", 1)
+    else:
+        breed=mongo.db.breed.find().sort("grooming_needs", -1)
+        reverse = False
+    return render_template('all_group.html', breed=breed, reverse = str(not reverse).lower())
 
 #sort dogs by intelligence
-@app.route('/sort_by_intelligence', methods=["GET","POST"])
-def sort_by_intelligence():
-    breed=mongo.db.breed.find().sort("intelligence", -1)
-    return render_template('all_group.html', breed=breed)
-
-
+@app.route('/sort_by_intelligence/<reverse>/', methods=["GET","POST"])
+def sort_by_intelligence(reverse): 
+    print(reverse, type(reverse))
+    if reverse.lower() == "true":
+        reverse = True
+        breed=mongo.db.breed.find().sort("intelligence", 1)
+    else:
+        breed=mongo.db.breed.find().sort("intelligence", -1)
+        reverse = False
+    return render_template('all_group.html', breed=breed, reverse = str(not reverse).lower())
 
 
 if __name__ == '__main__':

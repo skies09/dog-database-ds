@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dog Database</title>
+    <title>K9 Collection</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,7 +17,7 @@
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="{{url_for('get_dogs')}}" class="brand-logo">Dog Database</a>
+                <a href="{{url_for('get_dogs')}}" class="brand-logo">K9 Collection</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('add_breed')}}"><i class="material-icons right">add</i>Add Breed</a></li>
@@ -27,7 +27,8 @@
                     -->
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="#">Add Breeds</a></li>
+                    <li><a href="{{url_for('add_breed')}}">Add Breeds</a></li>
+                    <li><a href="{{url_for('all_group')}}">All Breeds</a></li>
                     <!--   <li><a href="#">Login</a></li>
                     <li><a href="#">Register</a></li> -->
                 </ul>
@@ -40,17 +41,19 @@
     <article class='container introduction-container'>
         <div class='row'>
             <div class='col-xs-12'>
-                <h1><strong>Dog Database</strong></h1>
+                <div class='header-wrapper'>
+                    <h1><strong>K9 Collection</strong></h1>
+                </div>
             </div>
         </div>
     </article>
 
-
-
-
-    <div class='container'>
-        {% block content %} {% endblock %}
+    <div class='container full-height'>
+        <div class='content-wrapper'>
+            {% block content %} {% endblock %}
+        </div>
     </div>
+
     <footer>
         <div class="container">
             <div class="row">
