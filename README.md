@@ -16,9 +16,9 @@ This is an open sourced dog database which anyone and everyone can contribute to
 
 ### The need it fulfills
 * There has yet to be a database showing all the dog breeds along with statistical information regarding each breed.
-* This database can show all the dog breeds if needs be with as much information about the breeds to give users of the website as much information about the different dog breeds before purchasing/adopting a dog.
+* This database can show every dog breed if needs be with as much information about the breeds to give users of the website as much information about the different dog breeds before purchasing/adopting a dog.
 * Being open sourced this database has the potential to be changed by people who already own dogs, to give more and up to date information to potential dog owners.
-* This in turn has the potential to reduce the number of rejected and homeless dogs as people will more likely get a breed more suited to themselves.
+* This in turn has the potential to reduce the number of rejected and homeless dogs as people will more likely get a breed they are more suited to.
 
 ### Target audience
 * Dog owners, dog fanatics and potential dog adopters.
@@ -29,11 +29,11 @@ This is an open sourced dog database which anyone and everyone can contribute to
 
 # How the website is setup
 ---
-##The body of the website is set up into
+## The body of the website is set up into
 
 ### Navigation Bar
 
-Includes the website __brand__ along with a button to add a breed and a button to link to a page that shows all the breeds which are right aligned. 
+Includes the website __brand__ along with a button to add a breed and a button linked to a page that shows all the breeds which are right aligned. 
 
 ### Introduction Container
 
@@ -52,12 +52,12 @@ The table below shows what is included in the section content on each page
 |Page         |  Section content|
 |-------------|-----------------|
 |Hound Group  |Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
-|Gundog Group ||
-|Pastoral Group||
-|Terrier Group||   
-|Toy Group    |
-|Utility Group|
-|Working Group|
+|Gundog Group |Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
+|Pastoral Group|Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
+|Terrier Group|Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
+|Toy Group    Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
+|Utility Group|Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
+|Working Group|Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
 
 ### The all breeds page
 
@@ -73,22 +73,9 @@ The section content of this page is a form that can be filled in by the user to 
 This page is the result of clicking on the edit button on a particular dog. The data of the dog appears in the form and the user has the option to change any of the data.
 
 
-* Footer
+## Footer
 
 Contains the copyright of the websites to the developer.
-
-
-
-
-
-
----
-
-
-
-###### Extras
-**
-
 
 
 ---
@@ -113,12 +100,13 @@ Contains the copyright of the websites to the developer.
 
 ---
 
-#### Ways of testing
+### Ways of testing
 
+#### Testing CRUD funtionality.
 1. Edited beagle breed to test the edit page.
 2. Deleted beagle breed to test the delete button.
 3. Added beagle breed to test add page.
-4. Checked every button on the all breeds page which does order the dogs by particular division. The drop downs also expand correctly.
+4. Checked every button on the all breeds page which does order the dogs by particular division. The drop downs for each dog also expand correctly.
 5. The brand in the nav bar links to the home page from every page.
 
 ###### Browsers tested on
@@ -145,4 +133,4 @@ Contains the copyright of the websites to the developer.
 
 ### Content
 
-Statistical information came from the pets4home.co.uk website.
+Statistical information came from the [pets4home.co.uk] website.

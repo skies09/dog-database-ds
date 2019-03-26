@@ -63,6 +63,10 @@ h2
     margin: 25px;
 }
 
+.carousel a{
+    margin-top:15px;
+}
+
 /*group pages*/
 
 
@@ -91,6 +95,7 @@ form{
 
 form a{
     margin:10px;
+    text-align: center;
 }
 
 /*footer*/

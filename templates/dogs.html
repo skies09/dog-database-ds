@@ -1,54 +1,34 @@
 {% extends 'base.html' %} {% block content %}
 
-
-<div class="carousel carousel-slider center">
-    <div class="carousel-item black-text" href="{{url_for('hound_group')}}">
-        <h2>Hound Group</h2>
-        <img src="/static/img/dachshund.jpg">
-        <div class="carousel-fixed-item center">
+<div class='carousel-wrapper'>
+    <div class="carousel carousel-slider center">
+        <div class="carousel-item black-text" href="{{url_for('hound_group')}}">
             <a href="{{url_for('hound_group')}}" class="btn waves-effect green white-text">Hound Group</a>
+            <img src="/static/img/dachshund.jpg">
         </div>
-    </div>
-    <div class="carousel-item black-text" href="{{url_for('gundog_group')}}">
-        <h2>Gundog Group</h2>
-        <img src="/static/img/retriever.jpg">
-        <div class="carousel-fixed-item center">
+        <div class="carousel-item black-text" href="{{url_for('gundog_group')}}">
             <a href="{{url_for('gundog_group')}}" class="btn waves-effect green white-text">Gundog Group</a>
+            <img src="/static/img/retriever.jpg">
         </div>
-    </div>
-    <div class="carousel-item black-text" href="{{url_for('pastoral_group')}}">
-        <h2>Pastoral Group</h2>
-        <img src="/static/img/oldenglishsheepdog.jpg">
-        <div class="carousel-fixed-item center">
+        <div class="carousel-item black-text" href="{{url_for('pastoral_group')}}">
             <a href="{{url_for('pastoral_group')}}" class="btn waves-effect green white-text">Pastoral Group</a>
+            <img src="/static/img/oldenglishsheepdog.jpg">
         </div>
-    </div>
-    <div class="carousel-item black-text" href="{{url_for('terrier_group')}}">
-        <h2>Terrier Group</h2>
-        <img src="/static/img/terrier.jpg">
-        <div class="carousel-fixed-item center">
+        <div class="carousel-item black-text" href="{{url_for('terrier_group')}}">
             <a href="{{url_for('terrier_group')}}" class="btn waves-effect green white-text">Terrier Group</a>
+            <img src="/static/img/terrier.jpg">
         </div>
-    </div>
-    <div class="carousel-item black-text" href="{{url_for('toy_group')}}">
-        <h2>Toy Group</h2>
-        <img src="/static/img/pug.jpg">
-        <div class="carousel-fixed-item center">
+        <div class="carousel-item black-text" href="{{url_for('toy_group')}}">
             <a href="{{url_for('toy_group')}}" class="btn waves-effect green white-text darken-text-2">Toy Group</a>
+            <img src="/static/img/pug.jpg">
         </div>
-    </div>
-    <div class="carousel-item black-text" href="{{url_for('utility_group')}}">
-        <h2>Utility Group</h2>
-        <img src="/static/img/dalmation.jpg">
-        <div class="carousel-fixed-item center">
+        <div class="carousel-item black-text" href="{{url_for('utility_group')}}">
             <a href="{{url_for('utility_group')}}" class="btn waves-effect green white-text">Utility Group</a>
+            <img src="/static/img/dalmation.jpg">
         </div>
-    </div>
-    <div class="carousel-item black-text" href="{{url_for('working_group')}}">
-        <h2>Working Group</h2>
-        <img src="/static/img/stbernard.jpg">
-        <div class="carousel-fixed-item center">
+        <div class="carousel-item black-text" href="{{url_for('working_group')}}">
             <a href="{{url_for('working_group')}}" class="btn waves-effect green white-text">Working Group</a>
+            <img src="/static/img/stbernard.jpg">
         </div>
     </div>
 </div>
