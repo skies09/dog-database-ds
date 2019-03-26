@@ -55,7 +55,7 @@ The table below shows what is included in the section content on each page
 |Gundog Group |Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
 |Pastoral Group|Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
 |Terrier Group|Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
-|Toy Group    Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
+|Toy Group    |Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
 |Utility Group|Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
 |Working Group|Title- The group that is shown. Multiple cards showing the different breeds with statistics and picture. There is also edit and delete buttons for each dog.|
 
@@ -133,4 +133,4 @@ Contains the copyright of the websites to the developer.
 
 ### Content
 
-Statistical information came from the [pets4home.co.uk] website.
+Statistical information came from the (pets4home.co.uk) website.
