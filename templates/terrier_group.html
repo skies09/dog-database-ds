@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %} 
+{% extends 'base.html' %} {% block content %}
 
 <div class='row'>
   <div class='col s12'>
@@ -7,7 +7,7 @@
 </div>
 
 <div class="row">
-{% for breed in breed %}
+  {% for breed in breed %}
 
   <div class="col s12 m6">
     <div class="card green darken-2">
@@ -25,15 +25,26 @@
 
         <form method="POST">
           <a href="{{url_for('edit_breed', breed_id=breed._id)}}" class="waves-effect waves-light btn blue">Edit</a>
-          <a href="{{url_for('delete_breed', breed_id=breed._id)}}" class="waves-effect waves-light btn red">Delete</a>
-        </form>
 
+          <!-- Modal Trigger -->
+          <a class="waves-effect waves-light btn red modal-trigger" href="#modal1">Delete</a>
+
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h2>Are you Sure?</h2>
+            </div>
+            <div class="modal-footer">
+              <a href="{{url_for('delete_breed', breed_id=breed._id)}}" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 
 
-{% endfor %} 
+  {% endfor %}
 </div>
 
 {% endblock %}
