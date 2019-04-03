@@ -24,6 +24,7 @@ This is an open sourced dog database which anyone and everyone can contribute to
 * Dog owners, dog fanatics and potential dog adopters.
 
 ### Expansion strategy
+* More categories such as 'cost to keep', 'good with children', 'amount of shedding' and 'tolerates being alone'
 * Links to dog rescue homes to encourage smart and researched adoption and reduce the number of dogs in kennels.
 
 
@@ -70,10 +71,11 @@ The section content of this page is a form that can be filled in by the user to 
 
 ### The edit breed page
 
-This page is the result of clicking on the edit button on a particular dog. The data of the dog appears in the form and the user has the option to change any of the data.
+If a user feels the data of a particular breed is inaccurate, they can update the information by clicking the edit button on the dog breed in question. The data of the dog appears in the form and the user has the option to change/update any of the data.
 
 ### Delete button
 
+This button removes the dog breed in question.
 There is a modal that appears when the delete button is clicked to make sure the breed is not deleted accidently by asking the user if they are sure to delete.
 
 ## Footer
