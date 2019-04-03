@@ -143,9 +143,9 @@ def sort_by_grooming_needs(reverse):
     print(reverse, type(reverse))
     if reverse.lower() == "true":
         reverse = True
-        breed=mongo.db.breed.find().sort("grooming_needs", 1)
-    else:
         breed=mongo.db.breed.find().sort("grooming_needs", -1)
+    else:
+        breed=mongo.db.breed.find().sort("grooming_needs", 1)
         reverse = False
     return render_template('all_group.html', breed=breed, reverse = str(not reverse).lower())
 
@@ -155,12 +155,10 @@ def sort_by_intelligence(reverse):
     print(reverse, type(reverse))
     if reverse.lower() == "true":
         reverse = True
-       
         breed=mongo.db.breed.find().sort("intelligence", -1)
     else:
         breed=mongo.db.breed.find().sort("intelligence", 1)
         reverse = False
-     
     return render_template('all_group.html', breed=breed, reverse = str(not reverse).lower())
 
 

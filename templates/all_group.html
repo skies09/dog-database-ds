@@ -1,43 +1,32 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class='row'>
-  <form method="GET" , "POST">
+    <form method="GET" , "POST">
 
-{% if reverse=="true" %}
-    <a href="{{url_for('sort_by_size', reverse=reverse)}}" class="waves-effect waves-light btn btn_small purple" value="true">Sort by Size Descending<i class="material-icons">arrow_downward</i></a>
-{% else %}
-    <a href="{{url_for('sort_by_size', reverse=reverse)}}" class="waves-effect waves-light btn btn_small purple" value="false">Sort by Size Ascending<i class="material-icons">arrow_upward</i></a>
-{% endif %}
+        {% if reverse=="true" %}
+        <a href="{{url_for('sort_by_size', reverse=reverse)}}" class="waves-effect waves-light btn btn_small purple" value="true">Sort by Size Descending<i class="material-icons">arrow_downward</i></a>
+        <a href="{{url_for('sort_by_exercise_needs', reverse=reverse)}}" class="waves-effect waves-light btn btn_small green" value="true">Sort by Exercise Needs Descending<i class="material-icons">arrow_downward</i></a>
+        <a href="{{url_for('sort_by_grooming_needs', reverse=reverse)}}" class="waves-effect waves-light btn btn_small orange" value="true">Sort by Grooming Needs Descending<i class="material-icons">arrow_downward</i></a>
+        <a href="{{url_for('sort_by_intelligence', reverse=reverse)}}" class="waves-effect waves-light btn btn_small blue" value="true">Sort by Intelligence Descending<i class="material-icons">arrow_downward</i></a>
+        <h4>Low to High</h4>
+        {% else %}
+        <a href="{{url_for('sort_by_size', reverse=reverse)}}" class="waves-effect waves-light btn btn_small purple" value="false">Sort by Size Ascending<i class="material-icons">arrow_upward</i></a>
+        <a href="{{url_for('sort_by_exercise_needs', reverse=reverse)}}" class="waves-effect waves-light btn btn_small green" value="false">Sort by Exercise Needs Ascending<i class="material-icons">arrow_upward</i></a>
+        <a href="{{url_for('sort_by_grooming_needs', reverse=reverse)}}" class="waves-effect waves-light btn btn_small orange" value="false">Sort by Grooming Needs Ascending<i class="material-icons">arrow_upward</i></a>
+        <a href="{{url_for('sort_by_intelligence', reverse=reverse)}}" class="waves-effect waves-light btn btn_small blue" value="false">Sort by Intelligence Ascending<i class="material-icons">arrow_upward</i></a>
+        <h4>High to Low</h4>
+        {% endif %}
 
-{% if reverse=="true" %}
-    <a href="{{url_for('sort_by_exercise_needs', reverse=reverse)}}" class="waves-effect waves-light btn btn_small green" value="true">Sort by Exercise Needs Descending<i class="material-icons">arrow_downward</i></a>
-{% else %}
-    <a href="{{url_for('sort_by_exercise_needs', reverse=reverse)}}" class="waves-effect waves-light btn btn_small green" value="false">Sort by Exercise Needs Ascending<i class="material-icons">arrow_upward</i></a>
-{% endif %}
-
-{% if reverse=="true" %}
-    <a href="{{url_for('sort_by_grooming_needs', reverse=reverse)}}" class="waves-effect waves-light btn btn_small orange" value="true">Sort by Grooming Needs Ascending<i class="material-icons">arrow_upward</i></a>
-{% else %}
-    <a href="{{url_for('sort_by_grooming_needs', reverse=reverse)}}" class="waves-effect waves-light btn btn_small orange" value="false">Sort by Grooming Needs Descending<i class="material-icons">arrow_downward</i></a>
-{% endif %}
-
-{% if reverse=="true" %}
-    <a href="{{url_for('sort_by_intelligence', reverse=reverse)}}" class="waves-effect waves-light btn btn_small blue" value="true">Sort by Intelligence Ascending<i class="material-icons">arrow_upward</i></a>
-{% else %}
-    <a href="{{url_for('sort_by_intelligence', reverse=reverse)}}" class="waves-effect waves-light btn btn_small blue" value="false">Sort by Intelligence Descending<i class="material-icons">arrow_downward</i></a>
-{% endif %}
-  
-  </form>
+    </form>
 </div>
-
 
 
 {% for breed in breed %}
 
 <ul class="collapsible popout">
-  <li>
-    <div class="collapsible-header"><i class="material-icons">pets</i>{{breed.breed}}</div>
-    <div class="collapsible-body"> <span>
+    <li>
+        <div class="collapsible-header"><i class="material-icons">pets</i>{{breed.breed}}</div>
+        <div class="collapsible-body"> <span>
                    Pedigree group - {{breed.group}}</br>
                    Size - {{breed.size}}</br>
                    Lifespan - {{breed.lifespan}}</br>
@@ -45,7 +34,7 @@
                    Grooming Needs - {{breed.grooming_needs}}</br>
                    Intelligence - {{breed.intelligence}}</br>
                 </span></div>
-  </li>
+    </li>
 
 </ul>
 
