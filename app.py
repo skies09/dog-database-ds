@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId 
 
+
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'dog_database'
 app.config["MONGO_URI"] = 'mongodb+srv://admin:admin1@myfirstcluster-oj81k.mongodb.net/dog_database?retryWrites=true'
@@ -154,10 +155,12 @@ def sort_by_intelligence(reverse):
     print(reverse, type(reverse))
     if reverse.lower() == "true":
         reverse = True
+       
         breed=mongo.db.breed.find().sort("intelligence", -1)
     else:
         breed=mongo.db.breed.find().sort("intelligence", 1)
         reverse = False
+     
     return render_template('all_group.html', breed=breed, reverse = str(not reverse).lower())
 
 
