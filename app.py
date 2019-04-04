@@ -110,7 +110,7 @@ def update_breed(breed_id):
 #This deletes the dog
 @app.route('/delete_breed/<breed_id>', methods=["GET","POST"])
 def delete_breed(breed_id):
-    mongo.db.breed.remove({'_id': ObjectId(breed_id)})
+    mongo.db.breed.remove({"_id": ObjectId(breed_id)})
     return redirect(url_for('get_dogs'))
 
 #sort dogs by size
