@@ -12,10 +12,11 @@
         </div>
         <div class='row'>
             <label>Pedigree Group</label>
-            <select id="group" name="group" class="browser-default">
+            <select id="group" name="group" class="browser-default" required>
     <option value="" disabled selected>Choose your option</option>
                   {% for breed in group %}
                       <option value="{{breed.group}}">{{breed.group}}</option>
+                      
                   {% endfor %}
   </select>
         </div>
