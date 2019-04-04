@@ -68,6 +68,7 @@ This list can be sorted using the buttons, depending on which statistic the user
 ### The add breeds page
 
 The section content of this page is a form that can be filled in by the user to add a dog breed to the collection.
+Please note that a pedigree must be selected to enter the dog to a particular group.
 
 ### The edit breed page
 
