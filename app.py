@@ -101,9 +101,10 @@ def update_breed(breed_id):
         'group':request.form.get('group'),
         'size':request.form.get('size'),
         'lifespan': request.form.get('lifespan'),
-        'exercising_needs': request.form.get('exercising_needs'),
+        'exercise_needs': request.form.get('exercise_needs'),
         'grooming_needs':request.form.get('grooming_needs'),
-        'intelligence':request.form.get('intelligence')
+        'intelligence':request.form.get('intelligence'),
+        'picture':request.form.get('picture')
     })
     return redirect(url_for('get_dogs'))
     
