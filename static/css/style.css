@@ -43,7 +43,7 @@ h4 {
 /*containers*/
 
 .full-height {
-    min-height: calc(100vh - 454px);
+    min-height: calc(100vh - 445px);
 }
 
 .introduction-container {
